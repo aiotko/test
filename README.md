@@ -42,7 +42,7 @@ All benchmark are performed one-by-one with restarting kernel before running eac
 
 ## SuperPoint
 
-descriptor_dim = 256, num_keypoints = 512, num_iterations = 10
+descriptor_dim = 256, num_keypoints = 512, num_iterations = 10.
 
 #### 256x256
 
@@ -62,10 +62,20 @@ descriptor_dim = 256, num_keypoints = 512, num_iterations = 10
 
 ## LightGlue
 
-descriptor_dim = 256, num_keypoints = 512, num_iterations = 10
+descriptor_dim = 256, num_keypoints = 512, num_iterations = 10.
 
 | Model                                                   | Raspberry Pi 5 |
 |---------------------------------------------------------|---------------:|
-| LightGlueONNX                                           |              - |
-| superpoint_lightglue_fullgraph.onnx                     |              - |
-| superpoint_lightglue_fullgraph_I256_D256_K512.onnx.onnx |              - | 
+| LightGlueONNX                                           |            766 |
+| superpoint_lightglue_fullgraph.onnx                     |            516 |
+| superpoint_lightglue_fullgraph_I256_D256_K512.onnx.onnx |            494 | 
+
+## Detectors
+
+Benchmark is performed on real images, num_iterations = 10.
+
+| Model                               | Raspberry Pi 5 |
+|-------------------------------------|---------------:|
+| LightGlueDetector                   |          11223 |
+| LightGlueORTDetector                |          15144 |
+| LightGlueORTDetector, 512 keypoints |           7017 |
