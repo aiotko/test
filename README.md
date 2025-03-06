@@ -40,15 +40,40 @@ All benchmark are performed one-by-one with restarting kernel before running eac
 
  </details>
 
-## Superpoint
+## SuperPoint
+
+descriptor_dim = 256, num_keypoints = 512, num_iterations = 10
+
+### 256x256
+
+|           Model                | Raspberry Pi 5 |
+|--------------------------------|---------------:|
+| SuperPoint                     |           4954 |
+| SuperPointONNX                 |            296 |
+| superpoint.onnx                |            147 |
+| superpoint_I256_D256_K512.onnx |            153 |
+
+### 1024x1024
+|           Model                | Raspberry Pi 5 |
+|--------------------------------|---------------:|
+| SuperPoint                     |           5107 |
+| SuperPointONNX                 |           4969 |
+| superpoint.onnx                |           2860 |
+
+## LightGlue
 
 descriptor_dim = 256
+
 num_keypoints = 512
+
 num_iterations = 100
 
-| Model | Image Size | Average time (ms) |
--------------------------------------
-| SuperPoint | 256x256 | 4978 |
-| SuperPoint | 1920x1080 | xx |
-| SuperPointONNX | 256x256 | yy |
-| SuperPointONNX | 1920x1080 | xx |
+|           Model                | Image Size | Time (ms) |
+|--------------------------------|------------|-----------|
+| SuperPoint                     | 256x256    |      - |
+|                                | 1024x1024  |      - |
+| SuperPointONNX                 | 256x256    |        yy |
+|                                | 1024x1024  |        xx |
+| superpoint.onnx                | 256x256    |        yy |
+|                                | 1024x1024  |        xx |
+| superpoint_I256_D256_K512.onnx | 256x256    |        yy |
