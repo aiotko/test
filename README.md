@@ -46,7 +46,7 @@ descriptor_dim = 256, num_keypoints = 512, num_iterations = 10
 
 #### 256x256
 
-|           Model                | Raspberry Pi 5 |
+| Model                          | Raspberry Pi 5 |
 |--------------------------------|---------------:|
 | SuperPoint                     |           4954 |
 | SuperPointONNX                 |            296 |
@@ -54,7 +54,7 @@ descriptor_dim = 256, num_keypoints = 512, num_iterations = 10
 | superpoint_I256_D256_K512.onnx |            153 |
 
 #### 1024x1024
-|           Model                | Raspberry Pi 5 |
+| Model                          | Raspberry Pi 5 |
 |--------------------------------|---------------:|
 | SuperPoint                     |           5107 |
 | SuperPointONNX                 |           4969 |
@@ -62,18 +62,10 @@ descriptor_dim = 256, num_keypoints = 512, num_iterations = 10
 
 ## LightGlue
 
-descriptor_dim = 256
+descriptor_dim = 256, num_keypoints = 512, num_iterations = 10
 
-num_keypoints = 512
-
-num_iterations = 100
-
-|           Model                | Image Size | Time (ms) |
-|--------------------------------|------------|-----------|
-| SuperPoint                     | 256x256    |      - |
-|                                | 1024x1024  |      - |
-| SuperPointONNX                 | 256x256    |        yy |
-|                                | 1024x1024  |        xx |
-| superpoint.onnx                | 256x256    |        yy |
-|                                | 1024x1024  |        xx |
-| superpoint_I256_D256_K512.onnx | 256x256    |        yy |
+| Model                                                   | Raspberry Pi 5 |
+|---------------------------------------------------------|---------------:|
+| LightGlueONNX                                           |              - |
+| superpoint_lightglue_fullgraph.onnx                     |              - |
+| superpoint_lightglue_fullgraph_I256_D256_K512.onnx.onnx |              - | 
