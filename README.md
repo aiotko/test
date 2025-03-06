@@ -29,7 +29,7 @@ All benchmark are performed one-by-one with restarting kernel before running eac
 
 2. Python 3.8.
 
-3. Preinstalled Pytoch 1.13 package with CUDA support.
+3. Preinstalled Pytoch 1.13 with CUDA support.
 
 4. One-time setup with the manually installed packages.
 
@@ -38,10 +38,17 @@ All benchmark are performed one-by-one with restarting kernel before running eac
    - scaled_dot_product_attention is implemented in place;
    - minor syntax changes.
 
-
- 
  </details>
- Ku
 
+## Superpoint
 
- Kuku
+descriptor_dim = 256
+num_keypoints = 512
+num_iterations = 100
+
+| Model | Image Size | Average time (ms) |
+-------------------------------------
+| SuperPoint | 256x256 | 4978 |
+| SuperPoint | 1920x1080 | xx |
+| SuperPointONNX | 256x256 | yy |
+| SuperPointONNX | 1920x1080 | xx |
