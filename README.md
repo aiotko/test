@@ -44,7 +44,7 @@ All benchmark are performed one-by-one with restarting kernel before running eac
 
 descriptor_dim = 256, num_keypoints = 512, num_iterations = 10
 
-### 256x256
+#### 256x256
 
 |           Model                | Raspberry Pi 5 |
 |--------------------------------|---------------:|
@@ -53,7 +53,7 @@ descriptor_dim = 256, num_keypoints = 512, num_iterations = 10
 | superpoint.onnx                |            147 |
 | superpoint_I256_D256_K512.onnx |            153 |
 
-### 1024x1024
+#### 1024x1024
 |           Model                | Raspberry Pi 5 |
 |--------------------------------|---------------:|
 | SuperPoint                     |           5107 |
